@@ -14,7 +14,7 @@ TANT QUE i < longueurDuTab
 	SINON i++ 
 FIN TANT QUE
 	SI flag = TRUE on sort
-
+*****************************************************************************************************************************************
 		var actualYear = 2016
 		var actualMonth = 12
 		var actualDay = 12
@@ -28,14 +28,38 @@ finalement c'est l'age?
 var age = actualYear - birthYear;
 SI actualMonth < birthMonth //on teste les mois
 	ALORS
-		age = age-1;
+		age = age- 1;
 	SINON SI actualMonth == birthMonth
 		ALORS
 			SI actualDay < birthDay //on teste les jours
 				ALORS
-					age = age -1;
-			FIN SI
+					age = age - 1;
+		FIN SI
+	SINON
 FIN SI
+*****************************************************************************************************************************************
+		var actualYear = 2016
+		var actualMonth = 12
+		var actualDay = 12
+		var birthYear = 2016
+		var birthMonth = 10
+		var birthDay = 28
+
+var age = actualYear - birthYear;
+
+####Dans le cas ou actualYear est égale à  birthYear alors on affiche le mois et le jour
+SI age = 0
+	ALORS
+		return actualMonth - birthMonth ET actualDay - birthDay
+FIN SI
+
+
+
+
+####Dans le cas ou actualYear est égale à birthYear ET actualMonth est égale birthMonth alors on affiche que les jours
+SI age = 0 ET actualMonth - birthMonth = 0
+	ALORS
+		return actualDay - birthDay 
 
 
 
