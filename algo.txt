@@ -59,7 +59,44 @@ FIN SI
 ####Dans le cas ou actualYear est égale à birthYear ET actualMonth est égale birthMonth alors on affiche que les jours
 SI age = 0 ET actualMonth - birthMonth = 0
 	ALORS
-		return actualDay - birthDay 
+		return actualDay - birthDay
+**************************************************************************
+Exo2:trier dans un tableau (asc)
+tableau = {3,25,1,6,23,56}
+	var switch = "";
+	var sorted = false;
+			
+			tantque (sorted == false){
+				var moved = false;
+				var i = 0;
+				tantque (i < tableau.lenght - 1){
+					si (tableau[i+1] < tableau[i])
+						alors
+							switch = tableau [i];
+							tableau [i] = tableau[i+1];
+							tableau[i+1] = switch;
+							moved = true;
+					finsi
+					i++ ;
+				}
+				si (moved == false)
+					alors
+						sorted = true;
+			}
+*********************************************************************
+exo3:compter le nombre de fois qu'un caratère apparait dans un string
+var word = "anticonstitutionnellement"
+var char = "t"
+var result = 0
+var i = 0
+
+TANTQUE i < tableau.lenght
+    ALORS
+        SI word[i] == char
+            result ++
+        FIN SI
+    i++
+FIN TANTQUE
 
 
 
